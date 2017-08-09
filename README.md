@@ -48,19 +48,19 @@ Butter.sign(-10.0)	# returns -1
 Butter.sign(10.0)	# returns 1
 ```
 
-### Butter.distance(x1, y1, x2, y2)
+#### Butter.distance(x1, y1, x2, y2)
 Returns the distance (as a float) between (`x1`, `y1`) and (`x2`, `y2`).
 ```squirrel
 Butter.distance(8, -2, 3, 9);	# 12.083
 ```
 
-### Butter.angle(x1, y1, x2, y2)
+#### Butter.angle(x1, y1, x2, y2)
 Returns the angle (in radians) between (`x1`, `y1`) and (`x2`, `y2`).
 ```squirrel
 Butter.angle(10, 10, 20, 20);	# 0.7853981625
 ```
 
-### Butter.rad(angle)
+#### Butter.rad(angle)
 Converts `angle` to radians using the Degrees-to-radians constant.
 ```squirrel
 Butter.rad(90.0);	# 1.5708
