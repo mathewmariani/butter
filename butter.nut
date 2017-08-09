@@ -5,6 +5,11 @@
 class Butter {
 	static version = [0, 0, 1];
 
+	# math constants
+	static pi = 3.14159265359;
+	static deg2rad = 0.0174532925;
+	static rad2deg = 57.2957795;
+
 	function clamp(value, min, max) {
 		return ((value < min) ? min : (value > max) ? max : value);
 	}
@@ -35,6 +40,10 @@ class Butter {
 		return max;
 	}
 
+	function round(value) {
+		return ((value < 0) ? ::ceil(value - 0.5) : ::floor(value + 0.5));
+	}
+
 	function sign(value) {
 		return ((value < 0) ? -1 : 1);
 	}
@@ -43,6 +52,16 @@ class Butter {
 		local dx = x1 - x2;
 		local dy = y1 - y2;
 		return (::sqrt(dx * dx + dy * dy));
+	}
+
+	function angle(x1, y1, x2, y2) {
+		local dx = x2 - x1;
+		local dy = y2 - y1;
+		return ::atan2(y2 - y1, x2 - x1);
+	}
+
+	function rad(angle) {
+		return (angle * deg2rad);
 	}
 
 	function random() {

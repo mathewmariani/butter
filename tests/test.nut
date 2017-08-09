@@ -34,21 +34,36 @@ test["butter.clamp"] <- function() {
 }
 
 test["butter.min"] <- function() {
-	equals(Butter.min(5, 9),			5);
-	equals(Butter.min(0, 9),			0);
-	equals(Butter.min(-5, 9),			-5);
-	equals(Butter.min(-5, -9),			-9);
-	equals(Butter.min(5, 9, 8),			5);
+	equals(Butter.min(5, 9),					5);
+	equals(Butter.min(0, 9),					0);
+	equals(Butter.min(-5, 9),					-5);
+	equals(Butter.min(-5, -9),				-9);
+	equals(Butter.min(5, 9, 8),				5);
 	equals(Butter.min(7, 9, 8, 3.3),	3.3);
 }
 
 test["butter.max"] <- function() {
-	equals(Butter.max(5, 9),			9);
-	equals(Butter.max(0, 9),			9);
-	equals(Butter.max(-5, 9),			9);
-	equals(Butter.max(-5, -9),			-5);
-	equals(Butter.max(5, 9, 8),			9);
+	equals(Butter.max(5, 9),					9);
+	equals(Butter.max(0, 9),					9);
+	equals(Butter.max(-5, 9),					9);
+	equals(Butter.max(-5, -9),				-5);
+	equals(Butter.max(5, 9, 8),				9);
 	equals(Butter.max(7, 9, 8, 3.3),	9);
+}
+
+test["butter.sign"] <- function() {
+  equals(Butter.sign(-10),	-1);
+  equals(Butter.sign(10),		1);
+  equals(Butter.sign(0),		1);
+}
+
+test["butter.round"] <- function() {
+  equals(Butter.round(1.0),		1.0);
+	equals(Butter.round(1.25),	1.0);
+	equals(Butter.round(1.5),		2.0);
+	equals(Butter.round(-1.0),	-1.0);
+	equals(Butter.round(-1.25),	-1.0);
+	equals(Butter.round(-1.5),	-2.0);
 }
 
 test["butter.sign"] <- function() {
@@ -59,9 +74,28 @@ test["butter.sign"] <- function() {
 
 test["butter.distance"] <- function() {
   equals(Butter.distance(5, 10, 5, 10),		0.0);
-  equals(Butter.distance(2, 0, 5, 0),		3.0);
-  equals(Butter.distance(5, 5, 1, 2),		5.0);
-  equals(Butter.distance(8, -2, 3, 9),		12.083);
+  equals(Butter.distance(2, 0, 5, 0),			3.0);
+  equals(Butter.distance(5, 5, 1, 2),			5.0);
+}
+
+test["butter.rad"] <- function() {
+  equals(Butter.rad(0),			(0.0 * 0.0174532925));
+  equals(Butter.rad(45),		(45.0 * 0.0174532925));
+  equals(Butter.rad(90),		(90.0 * 0.0174532925));
+  equals(Butter.rad(135),		(135.0 * 0.0174532925));
+}
+
+test["butter.degrees"] <- function() {
+  equals(Butter.rad(0),			(0.0 * 0.0174532925));
+  equals(Butter.rad(45),		(45.0 * 0.0174532925));
+  equals(Butter.rad(90),		(90.0 * 0.0174532925));
+  equals(Butter.rad(135),		(135.0 * 0.0174532925));
+}
+
+test["butter.angle"] <- function() {
+  equals(Butter.angle(5, 10, 5, 10),		(0.0 * 0.0174532925));
+	equals(Butter.angle(10, 10, 20, 20),	(45.0 * 0.0174532925));
+	equals(Butter.angle(10, 10, 10, 30),	(90.0 * 0.0174532925));
 }
 
 test["butter.random"] <- function() {

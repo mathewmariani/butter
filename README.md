@@ -6,6 +6,20 @@ A collection of functions for Squirrel.
 
 Butter has no constructor.
 
+### Math Constants
+
+#### Butter.pi
+The ratio of a circle's circumference to its diameter.</br>
+This is stored as `3.14159265359`.
+
+#### Butter.deg2rad
+Degrees-to-radians conversion constant.</br>
+This is stored as `0.0174532925`.
+
+#### Butter.rad2deg
+Radians-to-degrees conversion constant.</br>
+This is stored as `57.2957795`.
+
 ### Math Functions
 
 #### Butter.clamp(value, min, max)
@@ -38,6 +52,18 @@ Butter.sign(10.0)	# returns 1
 Returns the distance (as a float) between (`x1`, `y1`) and (`x2`, `y2`).
 ```squirrel
 Butter.distance(8, -2, 3, 9);	# 12.083
+```
+
+### Butter.angle(x1, y1, x2, y2)
+Returns the angle (in radians) between (`x1`, `y1`) and (`x2`, `y2`).
+```squirrel
+Butter.angle(10, 10, 20, 20);	# 0.7853981625
+```
+
+### Butter.rad(angle)
+Converts `angle` to radians using the Degrees-to-radians constant.
+```squirrel
+Butter.rad(90.0);	# 1.5708
 ```
 
 ### Random Functions
