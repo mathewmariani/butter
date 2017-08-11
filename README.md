@@ -80,8 +80,8 @@ Returns a random number between 0.0 and 1.0.
 If `a` and `b` are supplied a random number between [`a`, `b`] is returned.
 
 ```squirrel
-Butter.random()			# returns random float [0.0, 1.0]
-Butter.random(1, 10)	# returns random float [1, 10]
+Butter.random()       # returns random float [0.0, 1.0]
+Butter.random(1, 10)  # returns random float [1, 10]
 ```
 
 ### Type Checking Functions
