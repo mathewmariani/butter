@@ -40,6 +40,10 @@ class Butter {
 		return max;
 	}
 
+	function mod(a, b) {
+		return (((a % b) + b) % b);
+	}
+
 	function round(value) {
 		return ((value < 0) ? ::ceil(value - 0.5) : ::floor(value + 0.5));
 	}

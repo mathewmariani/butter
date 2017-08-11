@@ -51,6 +51,11 @@ test["butter.max"] <- function() {
 	equals(Butter.max(7, 9, 8, 3.3),	9);
 }
 
+test["butter.mod"] <- function() {
+	equals(Butter.mod(-1, 13),					12);
+	equals(Butter.mod(24, 12),					0);
+}
+
 test["butter.sign"] <- function() {
   equals(Butter.sign(-10),	-1);
   equals(Butter.sign(10),		1);

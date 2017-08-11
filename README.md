@@ -2,9 +2,9 @@
 
 A collection of functions for Squirrel.
 
-## Function Reference
+## Usage
 
-Butter has no constructor.
+Written in Squirrel 3.1 stable using the standard math lib.
 
 ### Math Constants
 
@@ -39,6 +39,13 @@ Butter.min(1.3, 0.0, 1.0)	# returns 0.0
 Returns largest of two or more values.
 ```squirrel
 Butter.clamp(1.3, 0.0, 1.0)	# returns 1.3
+```
+
+#### Butter.mod(a, b)
+Returns the remainder of a division.
+```squirrel
+local value = (-1 % 13)	# returns -1
+Butter.mod(-1, 13)		# returns 12
 ```
 
 #### Butter.sign(value)
