@@ -42,8 +42,8 @@ class Butter {
 
 	function between(value, min, max, inclusive = false) {
 		return inclusive
-		  ? min <= value && num <= max
-		  : min < value && num < max;
+		  ? min <= value && value <= max
+		  : min < value && value < max;
 	}
 
 	function mod(a, b) {
