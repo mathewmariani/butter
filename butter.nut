@@ -40,6 +40,12 @@ class Butter {
 		return max;
 	}
 
+	function between(value, min, max, inclusive = false) {
+		return inclusive
+		  ? min <= value && num <= max
+		  : min < value && num < max;
+	}
+
 	function mod(a, b) {
 		return (((a % b) + b) % b);
 	}

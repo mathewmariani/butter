@@ -41,6 +41,13 @@ Returns largest of two or more values.
 Butter.clamp(1.3, 0.0, 1.0)	# returns 1.3
 ```
 
+#### Butter.between(value, min, max [, inclusive = false])
+Returns true if a value is (exclusively) between (min, max).
+```squirrel
+Butter.between(5, 5, 5);				# returns false
+Butter.between(5, 5, 5, true);	# returns true
+```
+
 #### Butter.mod(a, b)
 Returns the remainder of a division.
 ```squirrel
